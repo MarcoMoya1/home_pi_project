@@ -1,0 +1,25 @@
+# Home Security Camera Stream
+
+A simple personal project to turn a Raspberry Pi and a USB webcam into a live-streaming home security camera, viewable through a clean web app.
+
+## Overview
+
+This project uses:
+- A **Raspberry Pi** (tested on Pi 3B+) as the camera server
+- A **USB webcam** for video capture
+- A lightweight **Python + Flask + OpenCV** server to stream live MJPEG video
+- A **Next.js/React** web app to display the live stream in a nice, responsive interface
+
+The goal is a basic, private live view of my apartment that I can access from any device on my network (or remotely with a tunnel like ngrok).
+
+Future ideas: Add motion detection, facial recognition, or recording — but for now, it's just a reliable live stream.
+
+## Setup
+
+### Raspberry Pi Side
+1. Install Raspberry Pi OS (Lite recommended).
+2. Connect your USB webcam.
+3. Install dependencies:
+   ```bash
+   sudo apt update
+   sudo apt install python3-opencv python3-flask
